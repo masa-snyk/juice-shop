@@ -51,7 +51,8 @@
     "Martin Rock-Evans",
     "Alejandro Saenz",
     "Justin Smid",
-    "Marc O'Polo"
+    "Marc O'Polo",
+		"Masatomo Ito"
   ],
   "scripts": {
     "build": "cd frontend && node ./node_modules/@angular/cli/bin/ng build --aot --prod --output-hashing=none --vendor-chunk=true --source-map=false",
