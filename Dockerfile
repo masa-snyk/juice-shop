@@ -1,4 +1,4 @@
-FROM node:12.22.12-buster
+FROM node:16.15.1-bullseye-slim
 
 RUN apt-get -y update && apt-get -y install ca-certificates apt-transport-https
 RUN apt-get -y jq wget watch
