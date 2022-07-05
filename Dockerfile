@@ -1,7 +1,7 @@
 FROM node:12.22.12-buster
 
 RUN apt-get -y update && apt-get -y install ca-certificates apt-transport-https
-RUN apt-get -y jq wget watch
+RUN apt-get -y install jq
 
 RUN echo 'deb     [trusted=yes check-valid-until=no] https://snapshot.debian.org/archive/debian/20211201T215332Z/ buster main \n\
 deb-src [trusted=yes check-valid-until=no] https://snapshot.debian.org/archive/debian/20211201T215332Z/ buster main \n\
@@ -40,4 +40,5 @@ RUN mkdir logs && \
     chmod -R g=u ftp/ frontend/dist/ logs/ data/ i18n/
 USER 1001
 EXPOSE 3000
+CMD ["echo", "hello world"]
 CMD ["npm", "start"]
